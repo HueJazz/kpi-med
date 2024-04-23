@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/kpi-med/static/css/main.4fc08270.css",
-    "main.js": "/kpi-med/static/js/main.70801e35.js",
-    "static/media/detection.jpg": "/kpi-med/static/media/detection.6364bac50a1fb77736cb.jpg",
-    "static/media/classification.jpg": "/kpi-med/static/media/classification.6d64388373cfa9ce9cdc.jpg",
-    "static/media/covid.jpg": "/kpi-med/static/media/covid.08dc2e2bd6995be724a3.jpg",
-    "static/media/melanoma.jpg": "/kpi-med/static/media/melanoma.f8fdcd18459556f12574.jpg",
-    "static/media/banner_3.jpg": "/kpi-med/static/media/banner_3.e6ae199d2539d3a62ea2.jpg",
-    "static/media/histology.jpg": "/kpi-med/static/media/histology.56b3538592c05221603d.jpg",
-    "static/media/lyme.jpg": "/kpi-med/static/media/lyme.b3adc139653427c34f01.jpg",
-    "static/media/map.JPG": "/kpi-med/static/media/map.41e4ad562cb41625bd19.JPG",
-    "static/media/logo_2.jpg": "/kpi-med/static/media/logo_2.acda55f94693997697a9.jpg",
+    "main.css": "/kpi-med/static/css/main.feac5643.css",
+    "main.js": "/kpi-med/static/js/main.2729cfcc.js",
+    "static/media/logo_2.png": "/kpi-med/static/media/logo_2.2d455dba65f5c40cbf96.png",
+    "static/media/banner.webp": "/kpi-med/static/media/banner.ff003686f74b2076c0db.webp",
+    "static/media/classification.webp": "/kpi-med/static/media/classification.2375c427c21ff2c16d6a.webp",
     "static/media/logo.jpg": "/kpi-med/static/media/logo.f89659216482ffa268e4.jpg",
+    "static/media/covid.webp": "/kpi-med/static/media/covid.4313aae9e7123a2ac7a9.webp",
+    "static/media/lyme.webp": "/kpi-med/static/media/lyme.63e8ac41fee9d2ea7181.webp",
+    "static/media/histology.webp": "/kpi-med/static/media/histology.c0b6639fffc975cf620a.webp",
+    "static/media/melanoma.webp": "/kpi-med/static/media/melanoma.351f1546ff408e5345d6.webp",
+    "static/media/detection.webp": "/kpi-med/static/media/detection.1f3dbf437db4a01db6e2.webp",
     "index.html": "/kpi-med/index.html",
-    "main.4fc08270.css.map": "/kpi-med/static/css/main.4fc08270.css.map",
-    "main.70801e35.js.map": "/kpi-med/static/js/main.70801e35.js.map"
+    "main.feac5643.css.map": "/kpi-med/static/css/main.feac5643.css.map",
+    "main.2729cfcc.js.map": "/kpi-med/static/js/main.2729cfcc.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fc08270.css",
-    "static/js/main.70801e35.js"
+    "static/css/main.feac5643.css",
+    "static/js/main.2729cfcc.js"
   ]
 }
