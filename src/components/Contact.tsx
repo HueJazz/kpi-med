@@ -9,11 +9,10 @@ const Contact: React.FC = () => {
     const [isMessageFocused, setIsMessageFocused] = useState<string | boolean>(false);
 
     return(
-        <div className="max-w-8xl mx-auto px-6 py-12">
-            <h1 className="text-center text-5xl mb-12 font-secondary font-bold text-custom">Contact Us</h1>
+        <div className="max-w-8xl mx-auto px-10 pt-4 pb-12">
+            <h1 className="text-center text-5xl mb-12 pt-8 font-secondary font-bold text-custom" id="contact">Contact Us</h1>
             <div className="flex flex-row gap-20">
-                <img loading="lazy" src={require("../images/map.JPG")} alt="Detection" className="w-5/12"></img>
-                <form className="flex flex-col w-5/12">
+                    <p className="w-5/12"><iframe className="w-full h-full" title="KPI" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Ukraine,Kyiv,KPI&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Powered by <a href="https://www.googlemapsgenerator.com">embed google maps</a> and <a href="https://unoregler.se/">uno regler</a></iframe></p>                <form className="flex flex-col w-5/12">
                     <div className="group mb-4 relative">
                         <label className={`duration-200 absolute text-slate-500 pointer-events-none ${isFullNameFocused ? 'text-sm bottom-full' : 'text-lg bottom-6'}`}>Your Full Name *</label>
                         <input className="mb-2 h-10 w-full border-b border-custom outline-0" type="text"

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Cards: React.FC = () => {
     return (
-            <div className="max-w-8xl mx-auto px-6 pb-12">
+            <div className="max-w-8xl mx-auto px-10 pb-10">
                 <div className="flex gap-5">
                     <div className="relative flex flex-col items-center px-12 pb-12 w-1/3 bg-custom -mt-24">
                         <div className="bg-white rounded-full p-5 mb-5 -mt-12">

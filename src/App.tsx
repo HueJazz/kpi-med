@@ -1,25 +1,27 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-import Subheader from './components/Subheader';
-import Banner from './components/Banner';
-import Cards from './components/Cards';
-import Services from './components/Services';
-import Assistants from './components/Assistants';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Home from './pages/Home';
+import FAQ from './pages/FAQ';
+import HomeLayout from './layouts/HomeLayout';
+import Publications from './pages/Publications';
+import Team from './pages/Team';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Header />
-      <Subheader />
-      <Banner />
-      <Cards />
-      <Services />
-      <Assistants />
-      <Contact />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route element={<HomeLayout />}>
+            <Route index element={<Home />} />
+            <Route path="/publications" element={<Publications />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/faq" element={<FAQ />} />
+          </Route>
+          {/* <Route path="/sign-in" element={<Login />}/>
+          <Route path="/sign-up" element={<Registration />}/> */}
+        </Routes>
+      </Router>
     </div>
   );
 }

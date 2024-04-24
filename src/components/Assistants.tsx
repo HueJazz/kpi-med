@@ -2,8 +2,8 @@ import React from 'react';
 
 const Assistants: React.FC = () => {
     return (
-        <div className="bg-tertiary my-12 py-16">
-            <div className="max-w-8xl mx-auto px-6">
+        <div className="bg-tertiary my-10 pt-8 pb-16">
+            <div className="max-w-8xl mx-auto pt-8 px-10" id="ai-assistants">
                 <h1 className="text-center text-5xl pb-1 font-secondary font-bold text-custom">AI-assistants of the doctor</h1>
                 <p className="text-center text-2xl pb-12 text-custom">The doctor's AI assistants created by us are built on the basis of modern AI models</p>
                 <ul className="grid grid-cols-3 gap-5">

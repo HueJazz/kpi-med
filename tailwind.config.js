@@ -6,13 +6,17 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'banner': "url('./images/banner_3.jpg')",
+        'banner': "url('./images/banner.webp')",
       },
       maxWidth: {
         '8xl': '1440px',
       },
       screens: {
         'lg2': '1080px',
+      },
+      boxShadow: {
+        'header': '0 0 10px 0 rgba(0,0,0,.15)',
+        'custom': '0px 3px 16px -4px rgba(0, 0, 0, 0.5)',
       },
       borderColor: {
         'custom': '#00316b',

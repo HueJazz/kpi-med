@@ -3,10 +3,10 @@ import React from 'react';
 const Footer: React.FC = () => {
   return (
     <div className="bg-custom mt-10 pt-16 pb-12">
-      <div className="max-w-8xl mx-auto px-6 py-2.5">
+      <div className="max-w-8xl mx-auto px-10 py-2.5">
         <div className="flex flex-row justify-between">
           <div className="w-4/12">
-            <img className="w-48 h-24" src={require("../images/logo_2.jpg")}></img>
+            <img className="w-48 h-24" src={require("../images/logo_2.png")}></img>
           </div>
           <div className="flex flex-row justify-between w-8/12">
           <div className="text-white text-lg">
