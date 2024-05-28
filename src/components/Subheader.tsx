@@ -31,10 +31,10 @@ const Header: React.FC = () => {
         <div className="max-w-8xl mx-auto px-6 w-full">
                 <ul className="flex gap-2 xl:gap-6 items-center justify-between">
                     {MENU.map((item, index) => (
-                    <li key={index} className="group mt-3 pb-3 cursor-pointer"
+                    <li key={index} className="group mt-3 pb-3"
                         onMouseEnter={() => setHoveredItem(item.title)} 
                         onMouseLeave={() => setHoveredItem('')}>
-                            <div className="flex items-center gap-2 border-b-2 py-2 border-transparent group-hover:border-active transition"
+                            <div className="flex items-center gap-2 border-b-2 py-2 border-transparent group-hover:border-active transition cursor-pointer"
                                 onClick={() => {item.submenu || ['Contact', 'Publications', 'Home'].includes(item.title) ? handleClick(item.title) : item.link && navigate(item.link)}}>
                                     <p className="font-medium text-secondary group-hover:text-active text-[17px] transition"> {t(`subheader.${item.title}`)}</p>
                                     {item.submenu && <svg className="h-3 w-3 fill-custom group-hover:fill-active rotate-0 group-hover:-rotate-180 transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>}
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
                                         <h1 className="mb-4 text-xl font-medium">{t(`${item.title.toLowerCase()}.title.${subitem.title}`)}</h1>
                                         {subitem.subtitle && <h2 className="text-white text-3xl font-medium my-4">{t(`${item.title.toLowerCase()}.subtitle.${subitem.title}`)}</h2>}
                                         <p className="font-medium mb-2">{t(`${item.title.toLowerCase()}.description.${subitem.title}`)}</p>
-                                        <button className={`text-lg py-1 px-2 mt-auto rounded-sm ${subitem.buttonStyle} transition ${item.title === 'Services' ? 'bg-primary hover:bg-active text-white': ''}`}>Learn More</button>
+                                        <button onClick={() => {setHoveredItem('') ;navigate('/kpi-med/services/' + `${subitem.title}`)}} className={`text-lg py-1 px-2 mt-auto rounded-sm ${subitem.buttonStyle} transition ${item.title === 'Services' ? 'bg-primary hover:bg-active text-white': ''}`}>Learn More</button>
                                     </div>
                                 ))}
                             </div>
