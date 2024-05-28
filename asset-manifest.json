@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kpi-med/static/css/main.39485a4e.css",
-    "main.js": "/kpi-med/static/js/main.024e1873.js",
+    "main.css": "/kpi-med/static/css/main.a7de6bb0.css",
+    "main.js": "/kpi-med/static/js/main.f168ff1e.js",
     "static/media/k-18.png": "/kpi-med/static/media/k-18.8f46c986fb7f39863067.png",
     "static/media/publication_4.jpg": "/kpi-med/static/media/publication_4.e935279e7fddd1fbc379.jpg",
     "static/media/publication_6.jpg": "/kpi-med/static/media/publication_6.8be001f7a2d570721907.jpg",
@@ -19,11 +19,11 @@
     "static/media/melanoma.webp": "/kpi-med/static/media/melanoma.351f1546ff408e5345d6.webp",
     "static/media/detection.webp": "/kpi-med/static/media/detection.1f3dbf437db4a01db6e2.webp",
     "index.html": "/kpi-med/index.html",
-    "main.39485a4e.css.map": "/kpi-med/static/css/main.39485a4e.css.map",
-    "main.024e1873.js.map": "/kpi-med/static/js/main.024e1873.js.map"
+    "main.a7de6bb0.css.map": "/kpi-med/static/css/main.a7de6bb0.css.map",
+    "main.f168ff1e.js.map": "/kpi-med/static/js/main.f168ff1e.js.map"
   },
   "entrypoints": [
-    "static/css/main.39485a4e.css",
-    "static/js/main.024e1873.js"
+    "static/css/main.a7de6bb0.css",
+    "static/js/main.f168ff1e.js"
   ]
 }
