@@ -1,53 +1,59 @@
 import React from "react";
-import { useState } from 'react'
+import { useForm, SubmitHandler } from 'react-hook-form';
+import FormInput from "./FormInput";
+import { CONTACT } from "../constants";
+import { FocusContext } from "./context/FocusContext";
+
+export type ContactFormData  = {
+    name: string;
+    email: string;
+    number: string;
+    message: string;
+  };
+
+export const emailPattern = {
+    value: new RegExp('^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$', 'ig'),
+    message: 'Enter a valid email address.',
+};
 
 const Contact: React.FC = () => {
 
-    const [isFullNameFocused, setIsFullNameFocused] = useState<string | boolean>(false);
-    const [isEmailFocused, setIsEmailFocused] = useState<string | boolean>(false);
-    const [isSubjectFocused, setIsSubjectFocused] = useState<string | boolean>(false);
-    const [isMessageFocused, setIsMessageFocused] = useState<string | boolean>(false);
+    const [blurInputs, setBlurInputs] = React.useState(false)
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset
+      } = useForm<ContactFormData>();
+    
+      const onSubmit: SubmitHandler<ContactFormData> = (data) => { console.log(data); reset(); setBlurInputs(!blurInputs)}
 
     return(
-        <div className="max-w-8xl mx-auto px-10 pt-4 pb-12">
-            <h1 className="text-center text-5xl mb-12 pt-8 font-secondary font-bold text-custom" id="contact">Contact Us</h1>
-            <div className="flex flex-row gap-20">
-                    <p className="w-5/12"><iframe className="w-full h-full" title="KPI" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Ukraine,Kyiv,KPI&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Powered by <a href="https://www.googlemapsgenerator.com">embed google maps</a> and <a href="https://unoregler.se/">uno regler</a></iframe></p>                <form className="flex flex-col w-5/12">
-                    <div className="group mb-4 relative">
-                        <label className={`duration-200 absolute text-slate-500 pointer-events-none ${isFullNameFocused ? 'text-sm bottom-full' : 'text-lg bottom-6'}`}>Your Full Name *</label>
-                        <input className="mb-2 h-10 w-full border-b border-custom outline-0" type="text"
-                            onFocus={() => setIsFullNameFocused(true)}
-                            onBlur={(event) => setIsFullNameFocused(event.target.value)}>
-                        </input>
-                    </div>
-                    <div className="group mb-4 relative">
-                        <label className={`duration-200 absolute text-slate-500 pointer-events-none ${isEmailFocused ? 'text-sm bottom-full' : 'text-lg bottom-6'}`}>Your Email *</label>
-                        <input className="mb-2 h-10 w-full border-b border-custom outline-0" type="text"
-                            onFocus={() => setIsEmailFocused(true)}
-                            onBlur={(event) => setIsEmailFocused(event.target.value)}>
-                        </input>
-                    </div>
-                    <div className="group mb-4 relative">
-                        <label className={`duration-200 absolute text-slate-500 pointer-events-none ${isSubjectFocused ? 'text-sm bottom-full' : 'text-lg bottom-6'}`}>Your Phone Number *</label>
-                        <input className="mb-2 h-10 w-full border-b border-custom outline-0" type="text"
-                            onFocus={() => setIsSubjectFocused(true)}
-                            onBlur={(event) => setIsSubjectFocused(event.target.value)}>
-                        </input>
-                    </div>
-                    <div className="group relative">
-                        <label className={`duration-200 absolute text-slate-500 pointer-events-none ${isMessageFocused ? 'text-sm bottom-full' : 'text-lg bottom-6'}`}>
-                            Your Message *
-                        </label>
-                        <textarea
-                            className="mb-2 h-12 w-full border-b border-custom outline-0 overscroll-auto resize-none"
-                            onFocus={() => setIsMessageFocused(true)}
-                            onBlur={(event) => setIsMessageFocused(event.target.value)}
-                        ></textarea>
-                    </div>
-                    <button className="mt-5 mb-2 bg-active text-white px-4 py-3 hover:bg-custom transition uppercase text-lg">
-                        Contact our team
-                    </button>
-                </form>
+        <div className="max-w-8xl mx-auto px-10 pt-48 pb-16">
+            <h1 className="text-center text-[40px] font-secondary pt-8 text-custom font-bold" id="Contact">Contact Us</h1>
+            <div className="flex flex-row gap-20 pt-16">
+                    <p className="w-5/12"><iframe className="w-full h-full" title="KPI" src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=Ukraine,Kyiv,KPI&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">Powered by <a href="https://www.googlemapsgenerator.com">embed google maps</a> and <a href="https://unoregler.se/">uno regler</a></iframe></p>
+                    <FocusContext.Provider value={blurInputs}>               
+                        <form className="flex flex-col w-5/12" onSubmit={handleSubmit(onSubmit)}>
+                            {CONTACT.map((item, index) => (
+                                <FormInput
+                                    key={index} 
+                                    id={item.id}
+                                    label={item.label}
+                                    isTextarea={index === CONTACT.length - 1}
+                                    register={register}
+                                    rules={{
+                                        required: 'You must enter your email address.',
+                                        ...(item.id === 'email' ? { pattern: emailPattern } : {})
+                                    }}
+                                    errors={errors} />
+                            ))}
+                            <button className="mt-9 bg-active text-white px-4 py-3 hover:bg-custom transition uppercase text-lg" type="submit">
+                                Contact our team
+                            </button>
+                        </form>
+                    </FocusContext.Provider> 
                 <div className="flex flex-col justify-start w-2/12 text-lg">
                     <div className="flex flex-col mb-4">
                         <h1 className="text-xl font-semibold">Email</h1>

@@ -4,6 +4,7 @@ import Cards from '../components/Cards';
 import Services from '../components/Services';
 import Assistants from '../components/Assistants';
 import Contact from '../components/Contact';
+import Publications from '../components/Publications';
 
 const FAQ: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const FAQ: React.FC = () => {
         <Cards />
         <Services />
         <Assistants />
+        <Publications />
         <Contact />
     </div>
   );
