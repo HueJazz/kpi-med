@@ -1,22 +1,29 @@
 {
   "files": {
-    "main.css": "/kpi-med/static/css/main.19850c90.css",
-    "main.js": "/kpi-med/static/js/main.b77d776d.js",
-    "static/media/logo_2.png": "/kpi-med/static/media/logo_2.2d455dba65f5c40cbf96.png",
+    "main.css": "/kpi-med/static/css/main.39485a4e.css",
+    "main.js": "/kpi-med/static/js/main.024e1873.js",
+    "static/media/k-18.png": "/kpi-med/static/media/k-18.8f46c986fb7f39863067.png",
+    "static/media/publication_4.jpg": "/kpi-med/static/media/publication_4.e935279e7fddd1fbc379.jpg",
+    "static/media/publication_6.jpg": "/kpi-med/static/media/publication_6.8be001f7a2d570721907.jpg",
+    "static/media/publication_2.jpg": "/kpi-med/static/media/publication_2.4286d524f33339427bdf.jpg",
+    "static/media/publication_1.jpg": "/kpi-med/static/media/publication_1.9322aac5c5996a1af80b.jpg",
+    "static/media/publication_5.jpg": "/kpi-med/static/media/publication_5.1cd2eb381919be49ff3c.jpg",
+    "static/media/publication_3.jpg": "/kpi-med/static/media/publication_3.6a1ef84ef826ac8f31e4.jpg",
     "static/media/banner.webp": "/kpi-med/static/media/banner.ff003686f74b2076c0db.webp",
     "static/media/classification.webp": "/kpi-med/static/media/classification.2375c427c21ff2c16d6a.webp",
-    "static/media/logo.jpg": "/kpi-med/static/media/logo.f89659216482ffa268e4.jpg",
+    "static/media/logo_2.png": "/kpi-med/static/media/logo_2.982ea071f98bce5068a8.png",
+    "static/media/logo_1.jpg": "/kpi-med/static/media/logo_1.3d49e2f08336cb230e49.jpg",
     "static/media/covid.webp": "/kpi-med/static/media/covid.4313aae9e7123a2ac7a9.webp",
     "static/media/lyme.webp": "/kpi-med/static/media/lyme.63e8ac41fee9d2ea7181.webp",
     "static/media/histology.webp": "/kpi-med/static/media/histology.c0b6639fffc975cf620a.webp",
     "static/media/melanoma.webp": "/kpi-med/static/media/melanoma.351f1546ff408e5345d6.webp",
     "static/media/detection.webp": "/kpi-med/static/media/detection.1f3dbf437db4a01db6e2.webp",
     "index.html": "/kpi-med/index.html",
-    "main.19850c90.css.map": "/kpi-med/static/css/main.19850c90.css.map",
-    "main.b77d776d.js.map": "/kpi-med/static/js/main.b77d776d.js.map"
+    "main.39485a4e.css.map": "/kpi-med/static/css/main.39485a4e.css.map",
+    "main.024e1873.js.map": "/kpi-med/static/js/main.024e1873.js.map"
   },
   "entrypoints": [
-    "static/css/main.19850c90.css",
-    "static/js/main.b77d776d.js"
+    "static/css/main.39485a4e.css",
+    "static/js/main.024e1873.js"
   ]
 }
